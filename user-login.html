@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="assets/css/style1.css">
+
+    <!-- Font Awesom CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Main Title -->
+    <title>Teleat-Beta</title>
+</head>
+
+<body>
+
+    <!-- ------------------------------Main Header---------------------------------- -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light mb-5">
+            <div class="container">
+                <a class="navbar-brand main__logo" href="#"><img src="assets/images/image 14.png" alt=""></a>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ------------------------------Main Section---------------------------------- -->
+
+    <div class="container button__right mb-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-5 col-sm-10">
+                <div class="user__form">
+                    <div class="form__img mb-5">
+                        <img src="assets/images/image 14.png" alt="">
+                    </div>
+                    <div class="user__form__marquee mb-5">
+                        <i class="fa-solid fa-bell me-2"></i>
+                        <a href="">“Next Monday we will order rice....</a>
+                    </div>
+                    <form class="user__login__form">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text span__icon" id="basic-addon1"><i
+                                    class="fa-solid fa-user"></i></span>
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="input-group mb-5">
+                            <span class="input-group-text span__icon" id="basic-addon1"><i
+                                    class="fas fa-lock fa__lock"></i></span>
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                aria-describedby="basic-addon1">
+                            <span class="hide-show-icon" id="togglePassword"><i class="far fa-eye"></i></span>
+                        </div>
+
+                        <script>
+                            const togglePassword = document.getElementById('togglePassword');
+                            const passwordInput = document.querySelector('.input-group input[type="password"]');
+
+                            togglePassword.addEventListener('click', () => {
+                                if (passwordInput.type === 'password') {
+                                    passwordInput.type = 'text';
+                                    togglePassword.innerHTML = '<i class="far fa-eye-slash"></i>';
+                                } else {
+                                    passwordInput.type = 'password';
+                                    togglePassword.innerHTML = '<i class="far fa-eye"></i>';
+                                }
+                            });
+                        </script>
+
+                        <button class="login__button" type="button" data-toggle="modal"
+                            data-target="#myModal">Login</button>
+                    </form>
+                    <script>
+                        const togglePassword = document.getElementById('togglePassword');
+                        const passwordInput = document.getElementById('passwordInput');
+
+                        togglePassword.addEventListener('click', () => {
+                            if (passwordInput.type === 'password') {
+                                passwordInput.type = 'text';
+                                togglePassword.classList.add('hide-password');
+                            } else {
+                                passwordInput.type = 'password';
+                                togglePassword.classList.remove('hide-password');
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+        </div>
+
+        <button class="login__bottom__button">Admin
+            Access</button>
+    </div>
+
+    <!---------------------- Modal ----------------------------->
+    <div class="modal custom-modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="p-5 modal-content modal__content">
+                <div class="modal-header modal__header">
+                    <h5 class="modal-title">Welcome Kashif</h5>
+                </div>
+                <div class="modal-body modal__body">
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised .</p>
+                </div>
+                <div class="modal-footer modal__footer">
+                    <button type="button" class="btn btn-secondary login__bottom__button"
+                        data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

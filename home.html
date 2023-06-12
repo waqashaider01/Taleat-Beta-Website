@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="/assets/css/style1.css">
+
+    <!-- Font Awesom CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Main Title -->
+    <title>Teleat-Beta</title>
+</head>
+
+<body>
+
+    <!--------------------------- Side Cart -------------------------------->
+    <input id="sideCartToggle" class="sidemenu-toggle hidden" name="sideCart" type="checkbox" />
+    <div class="sidemenu-container">
+        <aside id="sideCart" class="sidemenu sidemenu--cart">
+            <div class="sidemenu__header sidemenu__header--cart mb-4">
+                <div class="sidemenu__header_content container">
+                    <h1>Your Cart</h1>
+                    <label for="sideCartToggle" class="cursor-pointer cursor__pointer">Clear Cart</label>
+                </div>
+            </div>
+            <div class="sidemenu__body sidemenu__body--mobile container">
+                <div class="d-flex shadow p-2">
+                    <div class="d-flex">
+                        <div class="sidemenu__img">
+                            <img src="assets/images/Ellipse 4.png" alt="">
+                        </div>
+                        <div>
+                            <p class="sidemenu__content">Pizza</p>
+                            <div class="counter">
+                                <button id="decrement">-</button>
+                                <input id="count" type="text" value="0" readonly>
+                                <button id="increment">+</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidemenu__trash">
+                        <p>$55</p>
+                        <a href="#"> <i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+                <div class="d-flex shadow p-2">
+                    <div class="d-flex">
+                        <div class="sidemenu__img">
+                            <img src="assets/images/Ellipse 4.png" alt="">
+                        </div>
+                        <div>
+                            <p class="sidemenu__content">Pizza</p>
+                            <div class="counter">
+                                <button id="decrement">-</button>
+                                <input id="count" type="text" value="0" readonly>
+                                <button id="increment">+</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="sidemenu__trash">
+                        <p>$55</p>
+                        <a href="#"> <i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                </div>
+                <script>
+                    const decrementButton = document.getElementById('decrement');
+                    const incrementButton = document.getElementById('increment');
+                    const countInput = document.getElementById('count');
+
+                    decrementButton.addEventListener('click', () => {
+                        const currentValue = parseInt(countInput.value);
+                        if (currentValue > 0) {
+                            countInput.value = currentValue - 1;
+                        }
+                    });
+
+                    incrementButton.addEventListener('click', () => {
+                        const currentValue = parseInt(countInput.value);
+                        countInput.value = currentValue + 1;
+                    });
+                </script>
+            </div>
+            <div class="sidemenu__footer sidemenu__footer--cart">
+                <div class="sidemenu__footer-content sidemenu__footer-content--mobile container">
+                    <div class="sidemenu__footer__button button button--accent cursor-pointer">Checkout</div>
+                </div>
+            </div>
+        </aside>
+        <label for="sideCartToggle" class="sidemenu-overlay"></label>
+    </div>
+    <!-- ------------------------------Main Header---------------------------------- -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand main__logo" href="#"><img src="assets/images/image 14.png" alt=""></a>
+                <!-- <button class="btn main__button"><img src="images/fi-rr-shopping-cart-add.png" alt="">
+                </button> -->
+                <label for="sideCartToggle" class="cursor-pointer button main__button"><img
+                        src="assets/images/fi-rr-shopping-cart-add.png" alt=""></label>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ------------------------------Main Section---------------------------------- -->
+
+    <section>
+        <!-- ----------------Carousel Banner 1--------------------- -->
+        <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/images/Rectangle 2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/inna-gurina-JspLKUauwSI-unsplash.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/images/tamas-pap-XLmhRnV8yuc-unsplash.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                        class="fa-solid fa__solid fa-arrow-left"></i></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"><i
+                        class="fa-solid fa__solid fa-arrow-right"></i></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- ----------------Banner 2--------------------- -->
+        <div class="container mb-5">
+            <div class="row banner__2__row justify-content-between">
+                <!-- ------column 1-------- -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <a class="anchor__tag" href="#">
+                        <div class="anchor__card">
+                            <div class="anchor__card__img__1">
+                                <img src="assets/images/Ellipse 1.png" alt="">
+                            </div>
+                            <div class="anchor__card__content">
+                                <p>Coffee</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ------column 2-------- -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <a class="anchor__tag" href="#">
+                        <div class="anchor__card">
+                            <div class="anchor__card__img">
+                                <img src="assets/images/Ellipse 2.png" alt="">
+                            </div>
+                            <div class="anchor__card__content">
+                                <p>salad</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ------column 3-------- -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <a class="anchor__tag" href="#">
+                        <div class="anchor__card">
+                            <div class="anchor__card__img">
+                                <img src="assets/images/Ellipse 3.png" alt="">
+                            </div>
+                            <div class="anchor__card__content">
+                                <p>pasta</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ------column 4-------- -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <a class="anchor__tag" href="#">
+                        <div class="anchor__card">
+                            <div class="anchor__card__img">
+                                <img src="assets/images/Ellipse 4.png" alt="">
+                            </div>
+                            <div class="anchor__card__content">
+                                <p>pizza</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ------column 5-------- -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-3">
+                    <a class="anchor__tag" href="#">
+                        <div class="anchor__card">
+                            <div class="anchor__card__img__1">
+                                <img src="assets/images/Ellipse 5.png" alt="">
+                            </div>
+                            <div class="anchor__card__content">
+                                <p>desert</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----------------Banner 3--------------------- -->
+        <div class="container banner__3 mb-5">
+            <div class="navbar navbar-light mb-5">
+                <div class="container-fluid">
+                    <h1 class="navbar-brand banner__3__heading">Menu</h1>
+                    <div class="search__bar">
+                        <input type="text" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass search__icon"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- cards slider -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- slider 1 -->
+                    <div class="carousel-item active">
+                        <div>
+                            <div id="cards_landscape_wrap-2">
+                                <div class="container">
+                                    <div class="row pb-6">
+                                        <!-- card 1 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 2 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 3 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 4 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 5 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 6 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 7 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 8 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 9 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 10 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 11 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 12 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider 2 -->
+                    <div class="carousel-item">
+                        <div>
+                            <div id="cards_landscape_wrap-2">
+                                <div class="container">
+                                    <div class="row pb-6">
+                                        <!-- card 1 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 2 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 3 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 4 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 5 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 6 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 7 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 8 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 9 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 10 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 11 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 12 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- slider 3 -->
+                    <div class="carousel-item">
+                        <div>
+                            <div id="cards_landscape_wrap-2">
+                                <div class="container">
+                                    <div class="row pb-6">
+                                        <!-- card 1 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 2 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 3 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 4 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 5 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 6 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 7 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 8 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 9 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (1).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 10 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (3).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 11 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2.png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- card 12 -->
+                                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                                            <div class="card-flyer">
+                                                <div class="text-box">
+                                                    <div class="image-box">
+                                                        <img src="assets/images/image 2 (2).png" alt="" />
+                                                    </div>
+                                                    <div class="text-container">
+                                                        <h6>Burger</h6>
+                                                        <p class="mb-5">Burger With Chile Sauce</p>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn main__button">Add to Cart</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev carousel__control__prev" type="button"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon carousel__control__prev__icon" aria-hidden="true"><i
+                                class="fa-solid fa__solid__2 fa-arrow-left"></i></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next carousel__control__next" type="button"
+                        data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon carousel__control__next__icon" aria-hidden="true"><i
+                                class="fa-solid fa__solid__2 fa-arrow-right"></i></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+    </section>
+
+    <!-- ------------------------------Main Footer---------------------------------- -->
+    <footer>
+        <div class="footer__bg">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer__img mb-3">
+                            <img src="assets/images/image 14.png" alt="">
+                        </div>
+                        <p class="footer__content lh-base pe-5">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered
+                            alteration in some form, by injected humour, or randomised .
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer__links">
+                            <h3 class="mb-4">Quicks Links</h3>
+                            <ul class="lh-lg">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Menu</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Sign up</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer__links">
+                            <h3 class="mb-4">Legal</h3>
+                            <ul class="lh-lg">
+                                <li><a href="#">Terms & Condition</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer__links">
+                            <h3 class="mb-4">Menu</h3>
+                            <div class="footer__menu mb-3">
+                                <img src="assets/images/Group 38.png" alt="">
+                            </div>
+                            <div class="social__links">
+                                <i class="fa-brands fa-pinterest fa__pinterest me-4"></i>
+                                <i class="fa-brands fa-twitter fa__twitter me-4"></i>
+                                <i class="fa-brands fa-facebook fa__facebook me-4"></i>
+                                <i class="fa-brands fa-instagram fa__instagram me-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bg__1 p-4">
+            <p class="mb-0">2023<a href="" class="ms-1">Taleat</a>.All Right Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
